@@ -69,3 +69,19 @@ Usamos o Insomnia para testar as requisições, ou o HTTPie (apresentado pelo Di
 Instalamos o`npm install @fastify/cors` para permitir o uso de CORS (Cross-origin resource sharing) em uma aplicação Fastify.
 
 CORS é um mecanismo de segurança que permite que recursos restritos em uma página Web sejam solicitados de outro domínio. Resumindo, é o compartilhamento de recursos com origens diferentes.
+
+## Aula 3
+
+- Rota de autenticação
+- Criação de token JWT
+- Rotas autenticadas
+- Rota de upload de arquivos
+- URL de arquivos estáticos
+
+Fazemos a instalação do dotenv para fazer a leitura das variáveis de ambiente, executamos o comando `npm i dotenv -D`
+
+Instalamos o jwt com `npm i @fastify/jwt` e seguimos a [documentação](https://github.com/fastify/fastify-jwt)
+
+Criamos o arquivo auth.d.ts para declarar o tipo de informações que retornados pelo usuário do Fastify JWT.
+
+Verificamos o usuário nas rotas de memórias.
