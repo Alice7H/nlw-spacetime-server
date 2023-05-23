@@ -41,3 +41,31 @@ pnpm dev
 ```
 
 Abra [http://localhost:3333](http://localhost:3333) em conjunto com as rotas definidas no arquivo `server.ts` do diretório `src` com seu navegador para ver o resultado.
+
+## Aula 2
+
+- Estrutura do banco de dados
+- CRUD de memórias
+  - Criação
+  - Listagem
+  - Delete
+  - Atualização
+- Plugin de CORS
+
+Crio o schema de `Memory` para criar a tabela, uso o comando `npx prisma migrate reset` e depois o `npx prisma migrate dev` e informo o nome `create memories table` para criar a migration.
+
+ O comando `migrate dev` atualiza seu banco de dados usando migrações durante o desenvolvimento e cria o banco de dados se ele não existir.
+
+ O comando `migrate reset` exclui e recria o banco de dados ou executa uma 'reinicialização suave' removendo todos os dados, tabelas, índices e outros artefatos.
+
+A documentação do Prisma descreve o [Prisma CLI](https://www.prisma.io/docs/reference/api-reference/command-reference)
+
+Separamos nosso código e deixamos o CRUD de memórias no arquivo `memoriesRoutes`.
+
+Usamos a biblioteca de validação Zod.
+
+Usamos o Insomnia para testar as requisições, ou o HTTPie (apresentado pelo Diego Fernandes na NLW).
+
+Instalamos o`npm install @fastify/cors` para permitir o uso de CORS (Cross-origin resource sharing) em uma aplicação Fastify.
+
+CORS é um mecanismo de segurança que permite que recursos restritos em uma página Web sejam solicitados de outro domínio. Resumindo, é o compartilhamento de recursos com origens diferentes.
