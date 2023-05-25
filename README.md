@@ -42,7 +42,7 @@ pnpm dev
 
 Abra [http://localhost:3333](http://localhost:3333) em conjunto com as rotas definidas no arquivo `server.ts` do diretório `src` com seu navegador para ver o resultado.
 
-## Aula 2
+## Aula 2 - CRUD
 
 - Estrutura do banco de dados
 - CRUD de memórias
@@ -70,7 +70,7 @@ Instalamos o`npm install @fastify/cors` para permitir o uso de CORS (Cross-origi
 
 CORS é um mecanismo de segurança que permite que recursos restritos em uma página Web sejam solicitados de outro domínio. Resumindo, é o compartilhamento de recursos com origens diferentes.
 
-## Aula 3
+## Aula 3 - Autenticação
 
 - Rota de autenticação
 - Criação de token JWT
@@ -85,3 +85,22 @@ Instalamos o jwt com `npm i @fastify/jwt` e seguimos a [documentação](https://
 Criamos o arquivo auth.d.ts para declarar o tipo de informações que retornados pelo usuário do Fastify JWT.
 
 Verificamos o usuário nas rotas de memórias.
+
+## Aula 4 - Upload e nova memória
+
+- Rota de upload de arquivos
+- Servindo arquivos estáticos
+
+Instalamos o plug-in @fastify/multipart para analisar o tipo de conteúdo multipartes e facilitar o upload de arquivos.
+
+### Stream
+
+No processo de upload de arquivos, usamos os streams que são coleções de dados. Essa coleção pode não estar disponível todo de uma vez e não precisam ficar alocados inteiramente na memória.
+
+Elas são ferramentas poderosas para o desenvolvimento focado em grandes massas de dados de maneira que podemos trabalhar em pequenos pedaços e continuamente sem armazenar bits na RAM, além de ter a capacidade de enviar o resultado de uma stream para outra (composição de comandos).
+
+Pipeline é um método de módulo para canalizar erros de encaminhamento de fluxos e limpar adequadamente e fornecer um retorno de chamada quando estiver concluído.
+
+Promisify é uma função utilitária introduzida no Node.js na versão 8.0 e serve para transformar APIs 'legadas' ou um método que retorna respostas usando uma função callback para Promises.
+
+O comando `npm i @fastify/static` instala o plug in para servir arquivos estáticos o mais rápido possível, ele habilita o acesso a arquivos de ambiente.
